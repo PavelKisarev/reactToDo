@@ -69,10 +69,35 @@ function ToDoList(props) {
     const handleSearchInput = (event) =>{
       let curValue = event.target.value;
 
+      // let filterResult = tasks.map( (elem) => {
+      //   elem.task.includes(curValue) ? elem.hideByFilter = false : elem.hideByFilter = true;
+      //   return elem
+      // })
+      // setTasks(filterResult);
+
+      let newFiltredTask;
+
       let filterResult = tasks.map( (elem) => {
-        elem.task.includes(curValue) ? elem.hideByFilter = false : elem.hideByFilter = true;
-        return elem
+
+        if(elem.task.includes(curValue)){
+          newFiltredTask = {
+            id:elem.id,
+            task:elem.task,
+            isComplete:elem.isComplete,
+            hideByFilter:false
+          }
+        } else {
+          newFiltredTask = {
+            id:elem.id,
+            task:elem.task,
+            isComplete:elem.isComplete,
+            hideByFilter:true
+          }
+        }
+
+        return newFiltredTask;
       })
+
       setTasks(filterResult);
     }
     
