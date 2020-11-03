@@ -69,13 +69,11 @@ function ToDoList(props) {
     const handleSearchInput = (event) =>{
       let curValue = event.target.value;
 
-      tasks.map( (elem) => {
+      let filterResult = tasks.map( (elem) => {
         elem.task.includes(curValue) ? elem.hideByFilter = false : elem.hideByFilter = true;
+        return elem
       })
-
-      let searchResult = [...tasks];
-
-      setTasks([...searchResult]);
+      setTasks(filterResult);
     }
     
 
