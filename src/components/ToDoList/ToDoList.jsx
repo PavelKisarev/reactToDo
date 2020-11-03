@@ -81,16 +81,12 @@ function ToDoList(props) {
 
         if(elem.task.includes(curValue)){
           newFiltredTask = {
-            id:elem.id,
-            task:elem.task,
-            isComplete:elem.isComplete,
+            ...elem,
             hideByFilter:false
           }
         } else {
           newFiltredTask = {
-            id:elem.id,
-            task:elem.task,
-            isComplete:elem.isComplete,
+            ...elem,
             hideByFilter:true
           }
         }
