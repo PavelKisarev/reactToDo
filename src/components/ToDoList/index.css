@@ -1,5 +1,6 @@
 .title{
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .todo__search {
@@ -14,19 +15,30 @@
 
 .todo__item{
     margin-bottom: 15px;
-    padding: 5px;
+    padding: 15px;
     list-style: none;
-    border: 5px solid var(--white-color);
+    border: 1px solid var(--divided-color);
     background-color: var(--white-color);
     color: var(--text-color);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+}
+
+.todo__item:hover{
+    transform: translateX(5px) translateY(-5px);
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .todo__item.completed{
-    border-color: var(--green-color);
+    box-shadow:none;
+    border-color: var(--ok-color);
+}
+.todo__item.completed:hover {
+    box-shadow: -5px 5px 5px var(--ok-color);
 }
 .todo__item.hidden{
     display: none;
@@ -34,17 +46,14 @@
 
 .todo__btn-block{
     display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
 }
 
 .todo__btn-block .btn{
-    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
-.todo__clone {
-    border-top: 1px solid #ccc;
-    padding-top: 15px;
-    flex:1 1 100%;
-    display: flex;
+
+
+.form-add-task{
+    margin-bottom: 60px;
 }

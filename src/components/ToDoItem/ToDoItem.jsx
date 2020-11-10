@@ -19,11 +19,9 @@ function ToDoItem(props) {
         <li className={`todo__item ${completeClass} ${hideClass}`}>
             <p>{`${id} - ${task}`}</p>
             <div className="todo__btn-block">
-                <button className="btn btn-primary" onClick={completeTask}> {isComplete === false ? "Сделал":"Не сделал"}</button>
-                <button className="btn btn-secondary" onClick={removeTask}>Удалить</button>
-            </div>
-            <div className="todo__clone">
-                <div className="btn btn-primary" onClick={cloneTask}>Клонировать</div>
+                <button className="btn btn-primary btn-ico" onClick={cloneTask}><i class="fas fa-clone"></i></button>
+                <button className="btn btn-primary btn-ico" onClick={completeTask}> {isComplete === false ? <i class="far fa-check-circle"></i>:<i class="fas fa-minus-circle"></i>}</button>
+                <button className="btn btn-primary btn-ico" onClick={removeTask}><i class="fas fa-trash"></i></button>
             </div>
         </li>
     )

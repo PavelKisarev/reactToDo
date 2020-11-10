@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ToDoList from './components/ToDoList/ToDoList';
 
@@ -30,17 +29,23 @@ const state = {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8 logo">
+              <i class="far fa-list-alt"></i>
+            </div>
+          </div>
+        </div>
       </header>
-      <main>
-          <div className="ToDo__wrapper">
-            <ToDoList state={state}/>
+      <main className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-9">
+              <ToDoList state={state}/>
+            </div>
           </div>
       </main>
-      <footer className="App-footer">
-        <img src={logo} className="App-logo" alt="logo" />
-      </footer>
+      
     </div>
   );
 }

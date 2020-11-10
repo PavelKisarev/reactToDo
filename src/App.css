@@ -1,72 +1,41 @@
 :root{
-  --green-color:#28a745;
-  --red-color:red;
+  --primary-color:#9C27B0;
+  --dark-primary-color:#7B1FA2;
+  --secondary-color:#FF5722;
+
+  --ok-color:#47F517;
+
+  --divided-color:#BDBDBD;
+
   --white-color:#fff;
 
-  --text-color:#000;
+  --text-color:#212121;
+  --secondary-text-color:#757575;
 }
 
 *{
   box-sizing: border-box;
 }
 
-
 p{
   margin: 0 0 15px 0;
 }
 .App {
+  font-family: 'Roboto';
   text-align: center;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 100%);
-  color: var(--white-color);
+  color: var(--text-color);
+  background-color: var(--white-color);
   min-height: 100vh;
 }
 
-.App-logo {
+/* .App-logo {
   height: 60px;
   pointer-events: none;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 12s ease-in-out;
-}
-
-.App-header {
-  /* background-color: #282c34; */
-  padding: 60px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-footer{
-  padding: 60px 0;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.ToDo__wrapper{
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-control{
-  border:none;
-  display: block;
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  padding: 0.5rem;
-}
-
-.form-control:focus{
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
+} */
 
 .btn{
   border: none;
@@ -85,14 +54,37 @@ p{
 }
 
 .btn-primary{
-  background-color:var(--green-color);
+  background-color:var(--primary-color);
   color:  var(--white-color);
   font-size: 1rem;
 }
+.btn-primary:hover,
+.btn-primary:focus-within,
+.btn-primary:active{
+  background-color:var(--secondary-color);
+  color:  var(--white-color);
+}
+
 .btn-secondary{
-  background-color: var(--red-color);
+  background-color: var(--secondary-color);
   color:  var(--white-color);
   font-size: 1rem;
+}
+.btn-secondary:hover,
+.btn-secondary:focus-within,
+.btn-secondary:active{
+  background-color:var(--primary-color);
+  color:  var(--white-color);
+}
+
+.btn-ico{
+  font-size: 1.5rem;
+  padding: 1px 15px;
+}
+
+.logo{
+  font-size: 60px;
+  color: var(--secondary-color);
 }
 
 @keyframes App-logo-spin {

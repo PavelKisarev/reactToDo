@@ -92,18 +92,21 @@ function ToDoList(props) {
 
     return (
           <>
-          <div style={{marginBottom:'60px'}}>
-            <textarea onChange={handleTextarea} value={taskText} className="form-control" name="" id="" cols="30" rows="10"></textarea>
-            <button type="button" className="btn" onClick={addNewTask}>Добавить задачу</button>
+          <div className="row">
+            <div className="col-12 form-add-task">
+              <div className="form-group">
+                <textarea onChange={handleTextarea} value={taskText} className="form-control" name="" id="" cols="10" rows="1"></textarea>
+              </div>
+              <div className="form-group">
+                <button type="button" className="btn btn-primary" onClick={addNewTask}>Добавить задачу</button>
+              </div>
+            </div>
+            
+            <div className="col-12  todo__search">
+              <h2 className="title">Поиск по задачам</h2>
+              <input className="form-control" onChange={handleSearchInput}  type="text"/>
+            </div>
           </div>
-          
-          <hr/>
-          <div className="todo__search">
-            <h2 className="title">Поиск по задачам</h2>
-            <input className="form-control" onChange={handleSearchInput}  type="text"/>
-
-          </div>
-          <hr/>
 
           <div className="ToDoList">
             <h2 className="title">Список задач</h2>
