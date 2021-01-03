@@ -21,6 +21,12 @@ const state = {
       task:"Изучить Vue",
       isComplete: false,
       hideByFilter: false
+    },
+    {
+      id:4,
+      task:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+      isComplete: false,
+      hideByFilter: false
     }
   ]
 }
@@ -30,20 +36,18 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="container">
+        <div className="container-fluid" style={{height:'15px'}}>
           <div className="row justify-content-center">
-            <div className="col-12 col-lg-8 logo">
-              <i class="far fa-list-alt"></i>
+            <div className="col-12">
+              
             </div>
           </div>
         </div>
       </header>
-      <main className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-lg-9">
-              <ToDoList state={state}/>
-            </div>
-          </div>
+      <main>
+          <section>
+              <ToDoList state={state}/> 
+          </section>
       </main>
       
     </div>

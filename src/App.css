@@ -3,19 +3,29 @@
   --dark-primary-color:#7B1FA2;
   --secondary-color:#FF5722;
 
+  --alt-color:#19d3da;
+  --alt-color-2:#cad315;
+
   --ok-color:#47F517;
 
   --divided-color:#BDBDBD;
 
   --white-color:#fff;
+  --black-color:#000;
 
   --text-color:#212121;
   --secondary-text-color:#757575;
+
+  --transparent:transparent;
 }
 
 *{
   box-sizing: border-box;
 }
+/* html{
+  font-size: 10px;
+} */
+
 
 p{
   margin: 0 0 15px 0;
@@ -23,19 +33,18 @@ p{
 .App {
   font-family: 'Roboto';
   text-align: center;
-  color: var(--text-color);
-  background-color: var(--white-color);
   min-height: 100vh;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  /* color: var(--text-color);
+  background-color: var(--white-color); */
 }
 
-/* .App-logo {
-  height: 60px;
-  pointer-events: none;
+.form-control{
+  background-color: var(--transparent) !important;
+  color: var(--white-color) !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 12s ease-in-out;
-} */
 
 .btn{
   border: none;
@@ -45,6 +54,7 @@ p{
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 250ms ease-in-out;
 }
 
 .btn:focus{
@@ -56,30 +66,35 @@ p{
 .btn-primary{
   background-color:var(--primary-color);
   color:  var(--white-color);
-  font-size: 1rem;
+  box-shadow: 0 0 25px var(--primary-color);
 }
 .btn-primary:hover,
 .btn-primary:focus-within,
 .btn-primary:active{
   background-color:var(--secondary-color);
   color:  var(--white-color);
+  box-shadow: 0 0 25px var(--secondary-color);
 }
 
 .btn-secondary{
-  background-color: var(--secondary-color);
+  background-color: var(--alt-color);
+  box-shadow: 0 0 25px var(--alt-color);
   color:  var(--white-color);
-  font-size: 1rem;
 }
 .btn-secondary:hover,
 .btn-secondary:focus-within,
 .btn-secondary:active{
-  background-color:var(--primary-color);
+  background-color:var(--alt-color-2);
+  box-shadow: 0 0 25px var(--alt-color-2);
   color:  var(--white-color);
 }
 
 .btn-ico{
   font-size: 1.5rem;
-  padding: 1px 15px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo{
@@ -87,11 +102,3 @@ p{
   color: var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

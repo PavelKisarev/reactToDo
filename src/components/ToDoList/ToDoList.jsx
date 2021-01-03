@@ -91,30 +91,44 @@ function ToDoList(props) {
 
 
     return (
-          <>
-          <div className="row">
-            <div className="col-12 form-add-task">
-              <div className="form-group">
-                <textarea onChange={handleTextarea} value={taskText} className="form-control" name="" id="" cols="10" rows="1"></textarea>
-              </div>
-              <div className="form-group">
-                <button type="button" className="btn btn-primary" onClick={addNewTask}>Добавить задачу</button>
-              </div>
-            </div>
-            
-            <div className="col-12  todo__search">
-              <h2 className="title">Поиск по задачам</h2>
-              <input className="form-control" onChange={handleSearchInput}  type="text"/>
-            </div>
-          </div>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12 col-lg-4">
 
-          <div className="ToDoList">
-            <h2 className="title">Список задач</h2>
-            <ul className="todo__list">
-                {taskElements}
-            </ul>
+                <div className="logo">
+                  <i class="far fa-list-alt"></i>
+                </div>
+
+                <div className="form-add-task">
+                  <h2 className="title">Добавить новую задачу</h2>
+                  <div className="form-group">
+                    <textarea onChange={handleTextarea} value={taskText} className="form-control" name="" id="" cols="10" rows="5"></textarea>
+                  </div>
+                  <div className="form-group">
+                    <button type="button" className="btn btn-secondary" onClick={addNewTask}>Добавить задачу</button>
+                  </div>
+                </div>
+
+              
+              </div>
+
+              <div className="col-12 col-lg-8">
+
+                <div className="todo">
+                  <div className="todo__search">
+                    <h2 className="title">Поиск по задачам</h2>
+                    <input className="form-control" onChange={handleSearchInput}  type="text"/>
+                  </div>
+
+                  <h2 className="title">Список задач</h2>
+                  <ul className="todo__list">
+                      {taskElements}
+                  </ul>
+                </div>
+              </div>
+
+            </div>
           </div>
-          </>
     )
 }
 
