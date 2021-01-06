@@ -35,15 +35,7 @@ const state = {
 function App() {
   return (
     <div className="App">
-      <header>
-        <div className="container-fluid" style={{height:'15px'}}>
-          <div className="row justify-content-center">
-            <div className="col-12">
-              
-            </div>
-          </div>
-        </div>
-      </header>
+      
       <main>
           <section>
               <ToDoList state={state}/> 

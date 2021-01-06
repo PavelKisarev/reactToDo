@@ -96,7 +96,7 @@ function ToDoList(props) {
               <div className="col-12 col-lg-4">
 
                 <div className="logo">
-                  <i class="far fa-list-alt"></i>
+                  <i className="far fa-list-alt"></i>
                 </div>
 
                 <div className="form-add-task">
